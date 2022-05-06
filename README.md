@@ -18,7 +18,7 @@ npm install
 2. 启动服务器
 在当前路径下，命令行运行：
 ```bash
-npm install
+npm start
 ```
     
 运行成功之后会命令行会显示 `Starting Proxy at localhost:3228`，此时访问 `localhost:3228/api` 将统一代理到 `https://flomoapp.com/api` 。
