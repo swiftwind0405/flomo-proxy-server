@@ -12,8 +12,16 @@ const API_SERVICE_URL = 'https://flomoapp.com';
 app.use(morgan('dev'));
 
 app.use('/api', createProxyMiddleware({
-  target: API_SERVICE_URL, changeOrigin: true, onProxyReq,
+  target: API_SERVICE_URL, changeOrigin: true, onProxyReq, onProxyRes
 }));
+
+function onProxyRes(proxyRes, req, res) {
+  res.header("Access-Control-Allow-Origin", "lsp://logseq.io");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, x-xsrf-token, fuck_cookie");
+}
+
 
 function onProxyReq(proxyReq, req, res) {
   // add custom header to request
