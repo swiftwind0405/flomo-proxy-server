@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/swiftwind0405/flomo-proxy-server/compare/v1.3.0...v1.4.0) (2022-05-08)
+
+
+### Features
+
+* add README ([c62f5f3](https://github.com/swiftwind0405/flomo-proxy-server/commit/c62f5f3c138e309d144418111c850e9f3c63d678))
+
 # [1.3.0](https://github.com/swiftwind0405/flomo-proxy-server/compare/v1.2.0...v1.3.0) (2022-05-08)
 
 
