@@ -2,13 +2,30 @@
   "name": "flomo-proxy-server",
   "version": "1.0.0",
   "main": "index.js",
+  "bin": "index.js",
+  "author": "Seyee and Stanley",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.5",
     "morgan": "^1.10.0"
   },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^8.0.3",
+    "pkg": "^5.6.0"
+  },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "pkg ."
+  },
+  "pkg": {
+    "targets": [
+      "node17-macos-x64",
+      "node17-win-x64"
+    ],
+    "outputPath": "dist"
   }
 }
